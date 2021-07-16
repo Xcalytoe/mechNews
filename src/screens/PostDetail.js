@@ -11,16 +11,22 @@ export default function PostDetail({route}) {
                 <Text style={style.tag}>~ {item.news_source.name}  </Text>                
             </View>
             <View style={{flexDirection: "row", alignItems:"center", paddingVertical: 10,}}>
+                    <View style={{
+                          width:40, 
+                          height:40,
+                          borderColor:"hsl(246, 21%, 75%)",
+                          borderStyle:"solid",
+                          borderWidth:1, 
+                          borderRadius:20,
+                    }}>
                     <Image style={{
-                        width:40, 
-                        height:40,
-                        borderColor:"hsl(246, 21%, 75%)",
-                        borderStyle:"solid",
-                        borderWidth:1, 
-                        borderRadius:20,
+                        width:34, 
+                        height:34,
+                        borderRadius:17, 
                         backgroundColor:"hsl(246, 21%, 89%)",
                     }} source= {{ uri: item.categories[0].url }}/>
-                        
+                       
+                    </View>
                     <View style={{marginLeft:10,}}>
                         <Text style={style.tag}>{item.author}  </Text>
                         <Text style={{
