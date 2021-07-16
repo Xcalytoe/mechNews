@@ -4,7 +4,7 @@ export default function FeaturedNews({item, navigation}) {
     return (
         <TouchableOpacity style={style.flex}
             onPress={() => {
-                navigation.navigate('PostItem')
+                navigation.navigate('Detail', {item:item})
             }}>
             <Image style={style.img} source= {{ uri: item.media[0].url }}/>
             <View style={style.textBody}>
@@ -15,7 +15,7 @@ export default function FeaturedNews({item, navigation}) {
                         fontSize: 13,
                         color:"#fff",
                         fontWeight: "normal",
-                        fontStyle: "normal",
+                        fontStyle: "normal", 
                         paddingTop: 5
                     }}> {item.published_date.split(" ", 1)}</Text>
                 </View>
@@ -28,14 +28,15 @@ const style = StyleSheet.create({
     flex:{
         // padding:5,
         borderRadius: 5,
-        margin: 8,
+        // margin: 8,
         marginRight:20,
-        position:"relative",
+        // position:"relative",
         // borderColor:"red",
         // borderStyle:"solid",
         // borderWidth:1,
         width:220,
-        height:220,
+        height:180,
+        marginBottom:10,
         
         // alignItems: "center",
         // flexDirection: "row",
@@ -43,11 +44,10 @@ const style = StyleSheet.create({
     img:{
         borderRadius:8,
         flex:1,
-        // borderColor:"red",
-        // borderStyle:"solid",
-        // borderWidth:1,
         width:"100%",
-        height:"auto"
+        height:"auto",
+        backgroundColor:"hsl(246, 21%, 89%)",
+        
     },
     textBody:{
         paddingHorizontal: 10,

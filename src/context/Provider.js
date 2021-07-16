@@ -8,7 +8,7 @@ export const GlobalProvider =(props)=>{
 //     useEffect(() => {
 // // check for session
 //     }, []);
-    return(
+    return( 
         <GlobalContext.Provider value={{
           allNewsState, 
           allNewsDispatch

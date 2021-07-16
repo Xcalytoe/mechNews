@@ -4,7 +4,7 @@ export default function NewsItem({item, navigation}) {
     return (
         <TouchableOpacity style={style.flex}
         onPress={() => {
-            navigation.navigate('PostItem')
+            navigation.navigate('Detail', {item:item})
         }}>
             <Image style={style.img}  source= {{ uri: item.media[0].url }}/>
             <View style={style.textBody}>
@@ -12,7 +12,7 @@ export default function NewsItem({item, navigation}) {
                 <View style={{flexDirection: "row",}}>
                     <Text style={style.tag}>{item.author}  </Text>
                     <Text style={{
-                        fontSize: 13,
+                        fontSize: 12,
                         color:"#3e3a59",
                         fontWeight: "normal",
                         fontStyle: "normal",
@@ -27,11 +27,11 @@ export default function NewsItem({item, navigation}) {
 const style = StyleSheet.create({
     flex:{
         // padding:5,
-        borderRadius: 5,
+        borderRadius: 8,
         margin: 4,
         alignItems: "center",
         flexDirection: "row",
-        borderColor:"hsl(246, 21%, 89%)",
+        borderColor:"hsl(246, 21%, 95%)",
         borderStyle:"solid",
         borderWidth:1,
     },
@@ -40,6 +40,7 @@ const style = StyleSheet.create({
         borderBottomRightRadius:0,
         borderTopRightRadius:0,
         flexBasis:100,
+        backgroundColor:"hsl(246, 21%, 89%)",
         // borderColor:"red",
         // borderStyle:"solid",
         // borderWidth:1,
@@ -49,10 +50,9 @@ const style = StyleSheet.create({
     textBody:{
         paddingHorizontal: 10,
         flexShrink: 1,
-      
 
     },
-    header:{
+    header:{ 
         fontSize: 16,
         color:"#3e3a59",
         // flexWrap: "wrap",
@@ -62,7 +62,7 @@ const style = StyleSheet.create({
         fontStyle: "normal",
     },
     tag:{
-        fontSize: 14,
+        fontSize: 12,
         color:"#3e3a59",
         fontWeight: "normal",
         fontStyle: "italic",

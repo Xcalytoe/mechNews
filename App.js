@@ -4,9 +4,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import FlatListComponent from "./src/screens/FlatList";
-import HomeComponent from "./src/screens/HomeComponent";
 import HomeScreen from "./src/screens/HomeScreen";
 import AllNews from "./src/screens/AllNews";
 import PostDetails from './src/screens/PostDetail'
@@ -36,7 +33,7 @@ export default function App() {
             // options={{ title: 'Welcome' }}
           />
           <Stack.Screen name="News" component={AllNews} />
-          <Stack.Screen name="Details" component={PostDetails} />
+          <Stack.Screen name="Detail" component={PostDetails} />
         </Stack.Navigator>
       </NavigationContainer>
      </GlobalProvider>

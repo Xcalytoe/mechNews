@@ -11,7 +11,7 @@ export const search = (url) => async (allNewsDispatch)=> {
         allNewsDispatch({
             type:NEWS_SUCCESS,
             loading:false,
-            payload :data.data.data
+            payload :data.data
         })
        
         return data
